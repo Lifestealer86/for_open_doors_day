@@ -34,7 +34,7 @@ body {
 }
 
 img {
-    visibility: visible;
+    visibility: hidden;
     position: absolute;
     width: 200px;
     top: 200px;
