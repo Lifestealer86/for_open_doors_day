@@ -101,7 +101,7 @@ let runAway = () => {
         if(!startMove) {
             setTimeout(()=> {
                 showAnswer();
-            }, 3000)
+            }, 20000)
         }
         moveButton();
     });
