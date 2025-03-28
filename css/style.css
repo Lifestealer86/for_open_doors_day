@@ -1,0 +1,86 @@
+@import "fonts/font.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    overflow: hidden;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    background: #000;
+}
+
+.main-block {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-block > h1 {
+    font-size: 20rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.main-block > h1 > span {
+    visibility: hidden;
+}
+
+a {
+    text-decoration: none;
+    background: #ff0;
+    color: #000;
+    font-size: 2rem;
+    padding: 16px;
+}
+
+.bottom-anchor {
+    position: fixed;
+    bottom: 0;
+    right: 150px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.top-anchor {
+    position: fixed;
+    top: 0;
+    left: 350px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.right-anchor {
+    height: 7vh;
+    position: fixed;
+    right: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width: 2vw;
+    transition: 1s;
+}
+
+.second-bottom-anchor {
+    position: fixed;
+    bottom: 0;
+    left: 150px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: 1s;
+}
+
+.show-anchor {
+    width: 15vw;
+}
+
+.super-button {
+    position: absolute;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
