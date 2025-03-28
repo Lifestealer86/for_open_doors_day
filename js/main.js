@@ -101,7 +101,7 @@ let runAway = () => {
         if(!startMove) {
             setTimeout(()=> {
                 showAnswer();
-            }, 30000)
+            }, 3000)
         }
         moveButton();
     });
@@ -113,9 +113,11 @@ const random = (min, max) => {
 
 const printText = (el, text, time) => {
     const arr = text.split("");
+    el.classList.add("carriage");
     let inter = setInterval(() => {
         el.innerHTML += arr.splice(0, 1);
         if(arr.length <= 0) {
+            el.classList.remove("carriage");
             clearInterval(inter);
         }
     }, time);
@@ -123,9 +125,17 @@ const printText = (el, text, time) => {
 
 const showAnswer = () => {
     document.body.innerHTML = "";
-    const text = "Нет волшебной кнопки!\nНа втором мониторе открыт код,\nон покажет\nИщите свойство visibility\nИзмените его значение\nс hidden на visible!";
+    const text = "Нет волшебной кнопки!\nНа втором мониторе открыт код,\nон поможет.\nИщите свойство visibility.\nИзмените его значение\nс hidden на visible!";
     document.body.style = "color: #fff; font-size: 6rem;";
     let pre = document.createElement("pre");
     document.body.appendChild(pre);
-    printText(pre, text, 50);
+    printText(pre, text, 100);
+}
+
+const kickBirdForFly = () => {
+    const bird = document.querySelector("#logo");
+    //bird.style.animation = "fly 5s linear";
+    setTimeout(()=> {
+        bird.style.animation = "";
+    }, 5000);
 }
